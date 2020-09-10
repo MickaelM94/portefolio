@@ -1,0 +1,243 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Accueil{% endblock %}
+
+{% block body %}
+<header>
+        <!-- Header full screen -->
+        <div>
+            <h1>Développeur Web </br> Front End / WordPress</h1>
+            </br>
+            <h2>Simplifier la complexité</h2>
+            <img src="medias/developpeur-web.png" alt="Photo d'un développeur web sympathique" width="150px">
+            <br><i class="fas fa-angle-double-down arrowDown"></i>
+        </div>
+    </header>
+    <!-- (!!!)Bloc de présentation bleu -->
+    <div class="center fullSection">
+        <div class="blocText">
+            <h2>Hello, je suis Mickaël Mandrin</h2>
+            <p>Laissez moi en dire un peu plus sur moi, je ne vais pas vous faire croire que j'ai été passionné de développement depuis mon plus jeune âge.</p>
+            <p>Au contraire !</p>
+            <p>J'ai toujours pensé que tout ce qui était lié à la programmation était trop complexe, jusqu'au jour où j'ai voulu découvrir ce domaine et on peut dire que j'ai attrapé le virus...</p>
+            <p>Depuis 2018 j'ai pu :</p>
+        </div>
+    </div>
+    <!-- (!!!)Section emboitée du parcours-->
+    <div class="container" id="parcours">
+        <div class="row">
+            <!-- Bloc 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="miniBloc center nested">
+                    <img src="medias/cart.png" alt="Photo d'un développeur web sympathique" width="50px">
+                    <h5>Faire du e-commerce</h5>
+                    <p class="blueGrey">Avec ?</p>
+                    <p>Shopify en Dropshipping.</p>
+                    <p>J'ai ouvert une boutique d'accessoire de mode, <br>cette expérience m'a fait découvrir le marketing digital et le copywriting.</p>
+                </div>
+            </div>
+            <!-- Bloc 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="miniBloc center nested">
+                    <img src="medias/workspace.png" alt="Photo d'un développeur web sympathique" width="50px">
+                    <h5>Être en freelance</h5>
+                    <p class="blueGrey">Mes clients ?</p>
+                    <p>Sur Malt, et en prospectant.</p>
+                    <p>Probablement la partie la plus intense, gagner en compétence tout en cherchant des clients est un challenge que je me donne les moyens de réussir.</p>
+                </div>
+            </div>
+            <!-- Bloc 3 -->
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="miniBloc center nested">
+                    <img src="medias/study.png" alt="Photo d'un développeur web sympathique" width="50px">
+                    <h5>Continuer à me former</h5>
+                    <p class="blueGrey">Où ?</p>
+                    <p>Via des formations et divers tutos.</p>
+                    <p>J'aime l'idée que je n'aurai jamais fini d'apprendre. Je concentre mes recherches sur des outils me permetant de grand projet, en moins de temps.</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="center code">
+                    <p><i class="fas fa-code"></i></p>
+                </div>
+            </div>
+            <!-- Technologies -->
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="miniBloc2 center nested">
+                    <h5 class="blueGrey">Technologies</h5>
+                    <hr>
+                
+                    {% for skill in skills %}
+                    <img class="inline" src="../medias/{{ skill.img }}" width="20px"><p class="inline">{{ skill.name }}</p>
+                    </br>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Frameworks & Querys -->
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="miniBloc2 center nested">
+                    <h5 class="blueGrey">Frameworks & Querys</h5>
+                    <hr>
+                
+                    {# {% for skill in skills %}
+                    <img class="inline" src="../medias/{{ skill.img }}" width="20px"><p class="inline">{{ skill.name }}</p>
+                    </br>
+                    {% endfor %} #}
+                </div>
+            </div>
+            <!-- CMS -->
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="miniBloc2 center nested">
+                    <h5 class="blueGrey">CMS</h5>
+                    <hr>
+                
+                    {# {% for skill in skills %}
+                    <img class="inline" src="../medias/{{ skill.img }}" width="20px"><p class="inline">{{ skill.name }}</p>
+                    </br>
+                    {% endfor %} #}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- (!!!)Section réalisations -->
+    <div class="container" id="realisations">
+        <div class="center">
+            <h2>Mes réalisations</h2>
+            <p>Parler c'est bien, montrer c'est mieux.</br>
+            Dans cette section vous verrez mes projets finalisés et en cours.</p>
+        </div>
+        <!--Liste des réalisations -->
+        <div class="row listRea horizontal">
+            <!-- Projet 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3 bottomSmall">
+                <div class="miniBloc center imgClick">
+                    <img src="medias/logo.png" alt="Photo d'un développeur web sympathique" width="100px" class="image">
+                    <div class="overlay">
+                        <div class="info">
+                            <a href="#" class="clickInfo pro2"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# <!-- Projet 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3 bottomSmall">
+                <div class="miniBloc center imgClick">
+                    <img src="medias/developpeur-web.png" alt="Photo d'un développeur web sympathique" width="100px" class="image">
+                    <div class="overlay">
+                        <div class="info">
+                            <h3>Marque</h3>
+                            <p class="clickInfo pro2"><i class="far fa-info-circle viewInfo1"></i> Info</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet 3 -->
+            <div class="col-12 col-md-12 col-lg-4 mb-3 bottom">
+                <div class="miniBloc center imgClick">
+                    <img src="medias/developpeur-web.png" alt="Photo d'un développeur web sympathique" width="150px" class="image">
+                    <div class="overlay">
+                        <div class="info">
+                            <h3>Marque</h3>
+                            <p class="clickInfo pro2"><i class="far fa-info-circle viewInfo1"></i> Info</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet x --> #}
+
+        </div>
+    </div>
+
+    <!-- (!!!)Section modules -->
+    <div class="bigImg">
+        <p class="center">La simplicité est le nouveau luxe</p>
+    </div>
+    <div class="container" id="modules"></div>
+    <div class="space center">
+        <h2>Mes modules</h2>
+        <p>Il parait que c'est en codant que le devient un bon codeur.</br>
+        Ici vous trouverez toutes mes experimentations prêtent à être implémantées.</p>
+        <!--Liste des modules -->
+        <div class="row listRea horizontal">
+            <!-- Module 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3 bottomSmall">
+                <div class="modules">
+                    <img src="medias/home.png" alt="Photo d'un développeur web sympathique" width="50">
+                    <h3>Mkl - BnB</h3>
+                    <p class="clickInfo mod1"><i class="fas fa-check"></i> Tester le module</p>
+                </div>
+            </div>
+            <!-- Module 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3 bottomSmall">
+                <div class="modules">
+                    <img src="medias/question.png" alt="Photo d'un développeur web sympathique" width="50">
+                    <h3>Mystère</h3>
+                    <p class="clickInfo mod1"><i class="fas fa-vial"></i> Beta Testing</p>
+                </div>
+            </div>
+            <!-- Module 3 -->
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <div class="modules">
+                    <img src="medias/question.png" alt="Photo d'un développeur web sympathique" width="50">
+                    <h3>Boule de gomme</h3>
+                    <p class="clickInfo mod1"><i class="fas fa-vial"></i> Beta Testing</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Module x -->
+    </div>
+    <!-- (!!!)Bloc du CV -->
+    <div class="center fullSection">
+        <div class="blocText">
+            <h2>Ce que mes clients en disent</h2>
+            <p>Comme on dit, pour déterminer si une chose est vraie,</br>il vaut le témoignage de 2 ou 3 personnes.</p>
+        </div>
+        <div class="container">
+            <div class="row slider">
+                <div class="col-12 slide slide-1">
+                    <div class="testimonial">
+                        <img src="medias/developpeur-web.png" alt="Photo d'un développeur web sympathique" width="70px">
+                        <p>Nous avons apprécié dès le départ la disponibilité, l'amabilité, le professionnalisme et la réactivité de Mickaël.
+                            </br>
+                            </br>Il a su prendre en compte chacune de nos idées et n'a pas hésité à apporter toutes les modifications que nous voulions.
+                            </br>Il faut admettre que sa patience et sa créativité ont eu raison de nos indécisions.</br>
+                            </br>Nous apprécions encore aujourd'hui notre collaboration que nous aimerions voir perdurer.
+                            </br>
+                            </br>Travailler avec Mickaël est une belle expérience.</p>
+                        <div class="profil"> Nhirlhey S </br><span>Fondatrice de PREACH FRANCE</span></br><a href="https://www.malt.fr/profile/mickaelmandrin" target="_blank" class="malt">Commentaire de Malt</a></div>
+                    </div>
+                </div>
+
+                <div class="col-12 buttonsList">
+                    <button class="prev"><i class="fas fa-angle-left"></i></button>
+                    <button class="next"><i class="fas fa-angle-right"></i></button>
+                </div>
+                <div class="col-11 finalBloc">
+                    <h2>Alors, on travaille ensemble ?</h2>
+                    <p>Pourquoi prendre le temps d'arriver jusque là pour ne pas donner suite ?<br>Soyez rassuré(e), j'ai pensé à tout.</p>
+                    <p>Vous avez le choix entre :</p>
+                    <div class="col-xs-3 buttonsList2">
+                        <button><a class="contact" target="_blank" href="mailto:mandrin.mickael@gmail.com">Envoyer un email</a></button>
+                        <button><a class="contact" target="_blank" href="https://calendly.com/mandrin-mickael/rdv">Réserver un entretien</a></button>
+                    </div>
+                    <div class="col-12">
+                    <p>A tout de suite ;)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <i class="fas fa-code"></i>
+                    <p>Tous droits réservés à Mickaël Mandrin</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+{% endblock %}

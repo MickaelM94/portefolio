@@ -1,0 +1,15 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %} {{parent()}}Formulaire {% endblock %}
+
+{% block body %}
+{{parent()}}
+
+<div class="col-8 offset-2">
+    <h2 class="text-center py-3"> Formulaire </h2>
+    {{ form_start(formulaireSkill) }}
+    {{ form_end(formulaireSkill) }}
+
+</div>
+
+{% endblock %}

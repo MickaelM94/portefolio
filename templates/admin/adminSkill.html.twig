@@ -1,0 +1,37 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %} {{parent()}}Languages {% endblock %}
+
+{% block body %}
+{{parent()}}
+
+
+
+<div class="col-8 offset-2 py-1">
+<h2 class="text-center"> Gestion des languages </h2>
+          <table class="table table-bordered table-hover table-sm text-center py-5">
+            <thead>
+                <tr>
+                    <th scope="col">N°</th>
+                    <th scope="col">Languages</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Niveau</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for skill in skills %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ skill.name }}</td>
+                        <td>{{ skill.img }}</td>
+                        <td>{{ skill.level }}</td>
+                        <td>
+                            <a href="{{ path('skillUpdate', {'id':skill.id}) }}">Modifier</a> | <a href="{{ path('skillDelete', {'id':skill.id}) }}">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+          <a class="text-center" href="{{ path('skillCreate') }}">Ajouter une compétence</a>
+    </div>
+{% endblock %}
