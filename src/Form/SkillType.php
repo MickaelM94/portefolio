@@ -17,20 +17,20 @@ class SkillType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'required' => true,
-                'label' => 'Nom de la compétence',
+                'label' => 'Nom de la technologie',
                 'attr' => [
                     'placeholder' => 'ex: HTML'
                 ]
             ])
             ->add('img', TextType::class, [
                 'required' => false,
-                'label' => 'Symbole de la compétence'
+                'label' => 'Symbole de la technologie'
             ])
             ->add('level', IntegerType::class, [
                 'required' => false,
-                'label' => 'Niveau d\'acquisition de la compétence',
+                'label' => 'Niveau d\'acquisition de la technologie',
                 'attr' => [
-                    'placeholder' => '(1: Notion, 3:Intermédiaire, 5:Autonome'
+                    'placeholder' => '1:Notion 3:Intermédiaire 5:Autonome'
                 ]
             ])
 

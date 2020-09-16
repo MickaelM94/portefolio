@@ -3,13 +3,15 @@
 {% block title %} {{parent()}}Formulaire {% endblock %}
 
 {% block body %}
-{{parent()}}
 
-<div class="col-8 offset-2">
-    <h2 class="text-center py-3"> Formulaire </h2>
-    {{ form_start(formulaireSkill) }}
-    {{ form_end(formulaireSkill) }}
-
+<div class="container m-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center py-3"> Formulaire </h2>
+            {{ form_start(formulaireSkill) }}
+            {{ form_end(formulaireSkill) }}
+        </div>
+    </div>
 </div>
 
 {% endblock %}
